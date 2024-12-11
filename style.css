@@ -1,0 +1,134 @@
+body
+{
+height: 100vh;
+width: 100vw;
+padding:0px;;
+margin:0px;
+text-align: center;
+font-family:Georgia, 'Times New Roman', Times, serif;
+background-color: black;
+color:white;
+overflow-y:hidden;
+overflow-x:hidden;
+scrollbar-width: none;
+-ms-overflor-style:none;
+}
+#body::-webkit-scrollbar
+{
+display: none;
+}
+#score,#scoreText
+{
+display: inline-block;
+margin:0px;
+font-size: x-large;
+}
+#score
+{
+  position: fixed;
+font-size: x-large;
+}
+#Game-Container
+{
+height:90%;
+width:100%;
+margin:0px;
+background-color:black;
+display: flex;
+align-items:center;
+justify-content:center;
+overflow-y:hidden;
+overflow-x: hidden;
+scrollbar-width: none;
+-ms-overflor-style:none;
+}
+#Game-Container::-webkit-scrollbar
+{
+display:none;
+}
+#Btn-Containeer
+{
+background-color: #101010;
+border:10px solid #101010;
+border-radius:10px;
+height:70vmin;
+width:75vmin;
+margin:0px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap:1.5vmin;
+overflow-y:hidden;
+overflow-x:hidden;
+scrollbar-width: none;
+-ms-overflor-style:none;
+}
+#Btn-Containeer::-webkit-scrollbar
+{
+display:none;
+}
+#Winning-Pop-Up
+{
+position: fixed;
+z-index: 1000;
+background-color: red;
+border:5px solid black;
+border-radius:10px;
+height:200px;
+width:60vmin;
+display: none;
+}
+#Loosing-Text
+{
+color: black;
+margin-top:3vmin;
+font-size:larger;
+}
+#Restart-btn
+{  
+width:150px;
+height:30px;
+color: black;
+margin-top:60px;
+border-radius: 10px;
+border:5px solid black;
+background-color: black;
+color:white;
+}
+.Game-btns
+{
+height:12vmin;
+width:12vmin;
+background-color:ivory;
+border-radius: 10px;
+padding: 0px;
+transition:0.3s;
+outline: none;
+}
+#Winning-Pop-Up:target .popup{
+    animation: popup 3s;
+  }
+  @keyframes popup {
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.4);
+    }
+    60%{
+      transform: scale(1.1);
+    }
+    70%{
+      transform: scale(1.2);
+    }
+    80%{
+      transform: scale(1);
+    }
+    90%{
+      transform: scale(1.1);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
