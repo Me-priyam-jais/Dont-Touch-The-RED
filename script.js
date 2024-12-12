@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded",()=>
 })
 keys.forEach(key => {
 key.addEventListener("click",()=>{
+if(score<19)
+{
 if(key.id==gameOverKey)
 {
 loosePopUp.style.display="block";
@@ -32,6 +34,15 @@ key.style.backgroundColor="green";
 score++;
 scoreReader.innerHTML=score;
 key.disabled=true;
+}
+}
+else
+{
+loosePopUp.style.display="block";
+fullPage.style.pointerEvents="none";
+loosePopUp.style.pointerEvents="auto";
+loosePopUp.style.backgroundColor="green";
+gameOverStatement.innerText=`You Won The Game !`;
 }
 })
 });
