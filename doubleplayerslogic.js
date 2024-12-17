@@ -59,7 +59,7 @@ keys.forEach(key =>
     {
         if(key.id==gameOverKey)
         {
-        gameOverStatement.style.fontSize="18px";
+        gameOverStatement.style.fontSize="15px";
         declareWinner(player1turn,player1Name,player2Name);
         loosePopUp.style.display="block";
         loosePopUp.style.backgroundColor="#101010";
