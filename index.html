@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
-    <h1>Don't Touch The <span style="color:red">RED</span></h1>
+    <h1>Don't Touch The <span style="color:red; ">RED</span></h1>
     <h5 id="scoreText">Score:</h5><h5 id="score">0</h5>
     <div id="Game-Container">
     <div id="Btn-Containeer">
+        <div id="mode-selevtor">
+               <p id="mode-selevtor-text">Choose The Mode</p>
+           <div id="mode-selevtor-btns-container">
+               <button  class="mode-selevtor-btns" id="single-player-mode-btn">Single Player</button>
+               <button class="mode-selevtor-btns" id="two-player-mode-btn">Double Player</button>
+           </div>
+        </div>
+        <div id="players-name-inputbox">
+            <p id="players-name-inputbox-text">Enter Your Name Player-1</p>
+            <input type="text" id="players-name" placeholder="YOUR NAME">
+            <button id="done-btn">DONE</button>
+            </div>
         <div id="Winning-Pop-Up">
             <p id="Loosing-Text">You Lose The Game! Your Score:</p>
             <button id="Restart-btn">Restart Game</button>
@@ -37,6 +49,8 @@
         <button class="Game-btns" id="20"></button>
     </div>
     </div>
-<script src="script.js"></script>
+<script src="commonlogic.js" ></script>
+<script src="singleplayerlogic.js"></script>
+<script src="doubleplayerslogic.js"></script>
 </body>
 </html>
