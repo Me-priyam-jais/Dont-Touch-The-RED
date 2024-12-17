@@ -19,13 +19,15 @@ player1turn=true;
 }
 const declareWinner=(currentPlayer,player1,player2)=>
     {
-        if(currentPlayer===true)
+        if(currentPlayer===player1)
         {
-            gameOverStatement.innerHTML=`<span style="color:green; text-transform:capitalize;">${player2}</span> Won This Game.Better Luck Next time <span style="color:red; text-transform:capitalize;">${player1}</span>`;
+            gameOverStatement.innerHTML=`<span style="color:green; text-transform:capitalize;">${player2}</span> <span style="color:white;">Won This Game.Better Luck Next time</span>
+            <span style="color:red; text-transform:capitalize;">${player1}</span>`;
         }
         else
         {
-            gameOverStatement.innerHTML=`<span style="color:green; text-transform:capitalize;">${player1}</span> Won This Game.Better Luck Next time <span "color:red; text-transform:capitalize;">${player2}</span>`;
+            gameOverStatement.innerHTML=`<span style="color:green; text-transform:capitalize;">${player1}</span> <span style="color:white;">Won This Game.Better Luck Next time</span>
+            <span "color:red; text-transform:capitalize;">${player2}</span>`;
         }
     }
 twoPlayerMode.addEventListener("click",()=>
@@ -57,8 +59,7 @@ keys.forEach(key =>
     {
         if(key.id==gameOverKey)
         {
-        gameOverStatement.style.color="white";
-        gameOverStatement.style.fontSize="25px";
+        gameOverStatement.style.fontSize="18px";
         declareWinner(player1turn,player1Name,player2Name);
         loosePopUp.style.display="block";
         loosePopUp.style.backgroundColor="#101010";
