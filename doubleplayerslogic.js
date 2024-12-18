@@ -17,24 +17,24 @@ else
 player1turn=true;
 }
 }
-const declareWinner=(currentPlayer,player1,player2)=>
+const declareWinner=(currentPlayer1,player1,player2)=>
     {
-        if(currentPlayer===player1)
+        if(currentPlayer1===true)
         {
-            gameOverStatement.innerHTML=`<span style="color:green; text-transform:capitalize;">${player2}</span> <span style="color:white;">Won This Game.Better Luck Next time</span>
-            <span style="color:red; text-transform:capitalize;">${player1}</span>`;
+            gameOverStatement.innerHTML=`<span style="color:green; text-transform:capitalize;">${player2}</span> <span style="color:white;">Won This Game.Better Luck Next time</span> <span style="color:red; text-transform:capitalize;">${player1}</span>`;
         }
         else
         {
-            gameOverStatement.innerHTML=`<span style="color:green; text-transform:capitalize;">${player1}</span> <span style="color:white;">Won This Game.Better Luck Next time</span>
-            <span "color:red; text-transform:capitalize;">${player2}</span>`;
+            gameOverStatement.innerHTML=`<span style="color:green; text-transform:capitalize;">${player1}</span> <span style="color:white;">Won This Game.Better Luck Next time</span> <span style="color:red; text-transform:capitalize;">${player2}</span>`;
         }
     }
 twoPlayerMode.addEventListener("click",()=>
 {
     modePopUp.style.display="none";
     playersNameInputbox.style.display="block";
-    done_Btn.addEventListener("click",()=>{
+    playersName.focus();
+    done_Btn.addEventListener("click",()=>
+    {
     if(playercount===1)
     { 
         player1Name=playersName.value;   
@@ -42,6 +42,7 @@ twoPlayerMode.addEventListener("click",()=>
         playersName.value="";
         inputBoxStatement.innerText="Enter Your Name Player-2";
         playersNameInputbox.style.display="block";
+        playersName.focus();
         playercount++;
     }
     else
@@ -59,7 +60,7 @@ keys.forEach(key =>
     {
         if(key.id==gameOverKey)
         {
-        gameOverStatement.style.fontSize="15px";
+        gameOverStatement.style.fontSize="medium";
         declareWinner(player1turn,player1Name,player2Name);
         loosePopUp.style.display="block";
         loosePopUp.style.backgroundColor="#101010";
@@ -73,6 +74,14 @@ keys.forEach(key =>
         key.disabled=true;
         turnSwitcher();
         }
-        }
+    }
 )});
+playersName.addEventListener("keydown",(event)=>
+    {
+    if(event.key==="Enter")
+    {
+    event.preventDefault();
+    done_Btn.click();
+    }
+    })
 });
