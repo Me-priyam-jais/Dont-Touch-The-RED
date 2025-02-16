@@ -12,6 +12,7 @@ overflow-y:hidden;
 overflow-x:hidden;
 scrollbar-width: none;
 -ms-overflor-style:none;
+transition: background-color 0.3s;
 }
 #body::-webkit-scrollbar
 {
@@ -22,10 +23,11 @@ display: none;
 display:none;
 margin:0px;
 font-size: x-large;
+transition: color 0.3sec;
 }
 #score
 {
-  position: fixed;
+position: fixed;
 font-size: x-large;
 }
 #Game-Container
@@ -41,6 +43,7 @@ overflow-y:hidden;
 overflow-x: hidden;
 scrollbar-width: none;
 -ms-overflor-style:none;
+transition: background-color 0.3s;
 }
 #Game-Container::-webkit-scrollbar
 {
@@ -63,6 +66,7 @@ overflow-y:hidden;
 overflow-x:hidden;
 scrollbar-width: none;
 -ms-overflor-style:none;
+transition: background-color 0.3s;
 }
 #Btn-Containeer::-webkit-scrollbar
 {
@@ -78,10 +82,12 @@ border-radius:10px;
 height:250px;
 width:80vmin;
 color: white;
+transition: background-color 0.3s,display 0.3s;
 }
 #mode-selevtor-text
 {
 font-size:x-large;
+transition: color 0.3sec;
 }
 #mode-selevtor-btns-container
 {
@@ -143,6 +149,8 @@ border:5px solid #080808;
 border-radius: 10px;
 font-size: medium;
 text-align: center;
+transition: 1s;
+box-shadow: snow;
 }
 #done-btn2
 {
